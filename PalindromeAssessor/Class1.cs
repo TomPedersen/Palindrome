@@ -14,6 +14,13 @@ namespace PalindromeAssessor
             var cleanedEntry = Regex.Replace(entry, @"\W", string.Empty).ToLower();
 
             var reversedEntry = cleanedEntry.Reverse().ToArray();
+            var joinedReversedEntry = String.Join("", reversedEntry);
+
+            if (cleanedEntry == joinedReversedEntry)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
